@@ -34,7 +34,7 @@ HAVING AVG(length) > 120;
 
 -- 7) https://www.geeksengine.com/database/single-row-functions/rank.php
 SELECT title, length,
-	RANK() OVER (ORDER BY length DESC) as ranking
+	DENSE_RANK() OVER (ORDER BY length DESC) as ranking
 FROM sakila.film
 WHERE length IS NOT NULL
 ORDER BY length DESC
