@@ -37,4 +37,4 @@ SELECT title, length,
 	DENSE_RANK() OVER (ORDER BY length DESC) as ranking
 FROM sakila.film
 WHERE length IS NOT NULL
-ORDER BY length DESC
+ORDER BY length DESC;
